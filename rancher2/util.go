@@ -108,6 +108,10 @@ func DoUserLogin(url, user, pass, ttl, desc, cacert string, insecure bool) (stri
 		"Accept":       "application/json",
 		"Content-Type": "application/json",
 	}
+	fmt.Println("******Logging in to rancher with following data:**********")
+	fmt.Println(loginURL)
+	fmt.Println(loginData)
+	fmt.Println(loginHead)
 
 	// Login with user and pass
 	loginResp, err := DoPost(loginURL, loginData, cacert, insecure, loginHead)
